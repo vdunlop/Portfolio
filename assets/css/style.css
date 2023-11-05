@@ -1,0 +1,43 @@
+:root {
+    --c-primary: #66cdec;
+    --c-dark-grey: #5b5e61ef;
+    --c-bg-color: rgba(124, 120, 120, 0.116);
+  }
+  
+ html {
+    font-family: Verdana, sans-serif;
+    /*color: black;
+    color: var(--c-primary);*/
+    color: black;
+  }
+  
+  body {
+    background-color: var(--c-bg-color);
+  }
+ 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--c-primary);
+    background-color: var(--c-bg-color);
+  }
+   
+  header {
+
+  }
+  footer {
+    margin-top: 5rem;
+  }
+  
+  /* Utilities */
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+  
