@@ -1,18 +1,25 @@
+/*Global variables go here*/
 :root {
     --c-primary: #66cdec;
     --c-dark-grey: #5b5e61ef;
     --c-bg-color: rgba(124, 120, 120, 0.116);
   }
   
+ /* Styles for the whole page.*/
  html {
     font-family: Verdana, sans-serif;
     color: black;
   }
   
+  /* Styles for everything in the body*/
   body {
     background-color: var(--c-bg-color);
   }
- 
+
+  header {
+    width:100%;
+    background-color: var(--c-dark-grey);
+  }
   h1,
   h2,
   h3,
@@ -22,18 +29,27 @@
     color: var(--c-primary);
     background-color: var(--c-bg-color);
   }
+  
   h1 {
     display: inline;
+    justify-items: left;
     font-size: 2em;
-    margin-block-start: 0.67em;
+    background-color: var(--c-bg-color);
+  /*margin-block-start: 0.67em;
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-inline-end: 0px;*/
     font-weight: bold;
 }
-  nav ul li {
+
+section ul {
+  display:inline;
+  justify-items: right;
+}
+section ul li {
     display: inline;
-    margin-right: 25px;
+    margin-right: 15px;
+    font-size:.75rem;
 }
   
   main {
@@ -42,31 +58,31 @@
     gap: 1rem;
   }
 
-  header {
-    display: inline;
-  }
+  
   footer {
     display: inline:
     margin-top: 5rem;
   }
+
+  /* Set up the card class that we will be using for all of our containers containing
+  each of our projects that will show up under the Work header.*/
    .card {
     position: relative;
-    margin-top: 1rem;
-    padding: 1rem;
-    border: 3px dashed white;
+    margin: 1rem;
+    border: 3px solid var(--c-primary);
+    background-color: transparent;
+    background-image: url(./assets/images/surf-report);
   }
   
   .card h2 {
+    padding: .5rem;
     position: absolute;
-    top: -45px;
-    width: calc(100% - 4rem);
-    background-color: var(--c-dark-grey);
-    padding: 0.3rem 0.85rem;
-    border: 3px solid white;
-    border-radius: 7px;
+    top: 65%;
+    background-color: var(--c-primary);
+    color: var(--c-dark-grey);
   }
   
-  .card pre {
+  /*.card pre {
     padding: 0.25rem 0.5rem;
     background-image: linear-gradient(
       rgba(232, 102, 236, 0.3) 0%,
@@ -76,9 +92,72 @@
   }
   
   .card code {
-    line-height: 1.3;
+    line-height: 1.3;*/
   }
-  
+  /* Here are the images that we will be using for the header, as well as all of our
+  work cards */
+  .surf-report {
+    background-image: url("./assets/images/surf-report.jpg");
+    display: flex;
+    Height: 120px;
+    align-items:end;
+    font:
+      bold: calc(1em + 2 * (100vw - 120px) / 100) 'Dancing Script',
+      fantasy;
+      color: var(--c-primary);
+  }
+  .calculator {
+    background-image: img("./assets/images/calculate.jpg");
+    display: flex;
+    Height: 120px;
+    align-items:end;
+    font:
+      bold: calc(1em + 2 * (100vw - 120px) / 100) 'Dancing Script',
+      fantasy;
+      color: var(--c-primary);
+  }
+  .led-wall {
+    background-image: img("./assets/images/led-wall.jpg");
+    display: flex;
+    Height: 120px;
+    align-items:end;
+    font:
+      bold: calc(1em + 2 * (100vw - 120px) / 100) 'Dancing Script',
+      fantasy;
+      color: var(--c-primary);
+  }
+  .pastel-puzzles {
+    background-image: img("./assets/images/pastel-puzzles.jpg");
+    display: flex;
+    Height: 120px;
+    align-items:end;
+    font:
+      bold: calc(1em + 2 * (100vw - 120px) / 100) 'Dancing Script',
+      fantasy;
+      color: var(--c-primary);
+  }
+  .run-buddy {
+    background-image: img("./assets/images/run-buddy.jpg");
+    display: flex;
+    Height: 120px;
+    align-items:end;
+    font:
+      bold: calc(1em + 2 * (100vw - 120px) / 100) 'Dancing Script',
+      fantasy;
+      color: var(--c-primary);
+  }
+  .hero-bg {
+    display: flex;
+    Height: 300;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    justify-content: right;
+    align-items: end;
+    font: italic 1rem Verdana, sans-serif;
+    color: var(--c-primary);
+    display:block;
+  }
   /* Utilities */
   .text-center {
     text-align: center;
