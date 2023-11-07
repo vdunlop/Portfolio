@@ -120,7 +120,7 @@ section div p {
 }
 
 /* Set up card class for our first work that we are showing */
-.card-work {
+/*.card-work {
   position: relative;
   border: 3px solid var(--c-primary-accent);
 }
@@ -130,6 +130,27 @@ section div p {
   top: 65%;
   background-color: var(--c-primary-accent);
   color: var(--c-dark-grey);
+}*/
+.card-work {
+  /*position: relative;
+  border: 3px solid var(--c-primary-accent);*/
+  display:inline-flex;
+}
+
+.card-work article p {
+  color: var(--c-primary-accent);
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold; 
+  /* 
+  position: absolute;
+  top: 65%;
+  background-color: var(--c-primary-accent);
+  color: var(--c-dark-grey);*/
 }
 
 /* Set up the card class that we will be using for all of our containers containing
@@ -252,6 +273,27 @@ section ul li {
     margin-inline-end: 0px;
     font-weight: bold;
   }*/
+  .card-work {
+    /*position: relative;
+    border: 3px solid var(--c-primary-accent);*/
+    display:block;
+  }
+  
+  /*.card-work article p {
+    color: var(--c-primary-accent);
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold; 
+    position: absolute;
+    top: 65%;
+    background-color: var(--c-primary-accent);
+    color: var(--c-dark-grey);*/
+  }
+  
 }
 
 
