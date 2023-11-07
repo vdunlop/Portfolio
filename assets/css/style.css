@@ -1,121 +1,233 @@
 /*Global variables go here*/
 :root {
-    --c-primary: #66cdec;
-    --c-dark-grey: #5b5e61ef;
-    --c-bg-color: #2524241e;
-  }
-  
- /* Styles for the whole page.*/
- html {
-    font-family: Verdana, sans-serif;
-    color: black;
-  }
-  
-  /* Styles for everything in the body*/
-  body {
-    background-color: var(--c-bg-color);
-  }
-
-  main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-  }
-
-  img {
-    filter: grayscale(80%) blur(.1rem);
-  }
-
-  img:hover {
-    filter:none;
-    cursor: pointer;
-  }
-
-  /* Style the header. */
-  header {
-    width:100%;
-    background-color: var(--c-dark-grey);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--c-primary);
-    background-color: var(--c-bg-color);
-  }
-  
-  h1 {
-    display: inline;
-    justify-items: left;
-    font-size: 2em;
-    background-color: var(--c-bg-color);
-  /*margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;*/
-    font-weight: bold;
+  --c-primary-accent: #66cdec;
+  --c-dark-grey: #5b5e61ef;
+  --c-bg-color-dark:#5b5e61ef;
+  --c-bg-color-light: #2524241e;
+  --c-primary-text: black;
 }
 
+/* Styles for the whole page.*/
+html {
+  font-family: Verdana, sans-serif;
+  color: black;
+}
+
+/* Styles for everything in the body*/
+body {
+  background-color: var(--c-bg-color-light);
+}
+
+main {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+ /* grid-template-columns: 1fr 1fr;*/
+}
+
+/* Set up the images to have some grey-blue tone and to brighten on hover*/
+img {
+  /*filter: grayscale(90%) blur(.1rem);*/
+  filter: sepia(50%) saturate(150%) brightness(50%) hue-rotate(180deg);
+  Height: 100px;
+  width: 50px;
+}
+
+img:hover {
+  filter:none;
+  cursor: pointer;
+}
+
+/* Style the main header and h1. ----------------------------------*/
+
+header {
+  display : inline-flex;
+  width: 100%;
+  background-color: var(--c-dark-grey);
+  justify-content:space-between;
+  align-items: center;
+}
+
+header section p {
+  background: var(--c-primary-accent);
+  color:var(--c-primary-text);
+  /*text-align: center;*/
+  margin-left:1rem;
+  font-size: 2rem;
+  font-weight:bold;
+}
+
+header nav ul {
+  display:inline-flex;
+}
+header nav ul li {
+  margin-right: 20px;
+  list-style:none;
+  font-size:.75rem;
+}
+/*h1 {
+  display: inline;
+  justify-items: left;
+  font-size: 2em;
+  background-color: var(--c-bg-color-light)*/
+/*block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}*/
+
+/* Set the common styling for h1 through h6 */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--c-primary-accent);
+}
+
+/* About Me verbiage style --------------------------------------*/
+section div p {
+  display: block;
+  text-align: justify;
+  padding-left:50px;
+  padding-right:50px;
+}
+
+/* Set up card class for our About Me that we are showing */
+.card-about-me {
+  position: relative;
+  border: 3px solid var(--c-primary-accent);
+}
+
+.card-about-me h2 {
+  padding: .5rem;
+  position: absolute;
+  top: 65%;
+  background-color: var(--c-primary-accent);
+  color: var(--c-dark-grey);
+}
+
+/* Set up card class for our first work that we are showing */
+.card-work {
+  position: relative;
+  border: 3px solid var(--c-primary-accent);
+}
+
+.card-work h2 {
+  position: absolute;
+  top: 65%;
+  background-color: var(--c-primary-accent);
+  color: var(--c-dark-grey);
+}
+
+/* Set up the card class that we will be using for all of our containers containing
+each of our projects that will show up under the Work header.*/
+.card {
+  position: relative;
+  border: 3px solid var(--c-primary-accent);
+}
+
+.card h2 {
+  padding: .5rem;
+  position: absolute;
+  top:  25%;
+  background-color: var(--c-primary-accent);
+  color: var(--c-dark-grey);
+}
+
+/* Here is the image that we will be using for the header. */
+.hero-bg {
+  display: flex-inline;
+  Height: 200px;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  display:block;
+}
+
+.hero-bg h2 {
+  font: italic 1rem Verdana, sans-serif;
+  color: var(--c-dark-grey);
+  background: var(--c-primary-accent);
+  justify-content: right;
+  align-items: end;
+  padding: .5rem;
+  position: absolute;
+  top: 50%;
+}
+
+/* Set up for footer --------------------------------------------------*/
+footer {
+  display : inline-flex;
+  width: 100%;
+  background-color: var(--c-bg-color-light);
+  justify-content:space-between;
+  align-items: center;
+}
 section ul {
-  display:inline;
-  justify-items: right;
+  display:inline-flex;
 }
 section ul li {
-    display: inline;
-    margin-right: 15px;
-    font-size:.75rem;
-    list-style:none;
+  font-size:.75rem;
+  list-style:none;
+  margin-right: 20px;
 }
-  /* About me verbiage style */
-  section p {
-    display: block;
-    text-align: justify;
-    text-justify:inter-word;
+/* Tablets - header changes color */
+/*@media screen and (max-width: 1200px) {
+  p {
+    background: #772014;
   }
-  footer {
-    display: inline:
-    margin-top: 5rem;
-  }
+*/
 
-  /* Set up the card class that we will be using for all of our containers containing
-  each of our projects that will show up under the Work header.*/
-   .card {
-    position: relative;
-    border: 3px solid var(--c-primary);
-  }
-  
-  .card h2 {
-    padding: .5rem;
-    position: absolute;
-    top: 65%;
-    background-color: var(--c-primary);
-    color: var(--c-dark-grey);
-  }
-  
-    /* Here are the images that we will be using for the header, as well as all of our
-  work cards */
-  .hero-bg {
-    display: flex;
-    Height: 200px;
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 500px) {
+  header {
+    flex-wrap:wrap;
+    display : block;
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    justify-content: right;
-    align-items: end;
-    font: italic 1rem Verdana, sans-serif;
-    color: var(--c-primary);
+    background-color: var(--c-bg-color-light);
+    justify-content:space-between;
+    align-items: center;
+    padding-bottom:20px;
+  }
+  header nav ul {
     display:block;
   }
-    
-  /* Utilities */
-  .text-center {
-    text-align: center;
+  header nav ul li {
+    background-color: var(--c-dark-grey);
+    list-style:none;
+    font-size:1rem;
+    padding-left:20px;
+    padding-right:20px;
+    text-align: left;
+    margin-bottom: 5px;
+    }
+    .hero-bg {
+      display:none;
+    }
+    section div p {
+      display: block;
+      text-align: justify;
+      padding-left:0;
+      padding-right:0;
+    }
   }
 
-  .text-left {
-    text-align: left;
-  }
-  
+
+/* Small smartphones - image placeholders change color */
+/*@media screen and (max-width: 576px) {
+  p {
+    background: #8ac4ff;
+  }*/
+*/
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
