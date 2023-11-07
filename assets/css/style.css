@@ -2,7 +2,7 @@
 :root {
   --c-primary-accent: #66cdec;
   --c-dark-grey: #5b5e61ef;
-  --c-bg-color-dark:#5b5e61ef;
+  --c-bg-color-dark: #5b5e61ef;
   --c-bg-color-light: #2524241e;
   --c-primary-text: black;
 }
@@ -19,10 +19,10 @@ body {
 }
 
 main {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
- /* grid-template-columns: 1fr 1fr;*/
+  /* grid-template-columns: 1fr 1fr;*/
 }
 
 /* Set up the images to have some grey-blue tone and to brighten on hover*/
@@ -34,37 +34,39 @@ img {
 }
 
 img:hover {
-  filter:none;
+  filter: none;
   cursor: pointer;
 }
 
 /* Style the main header and h1. ----------------------------------*/
 
 header {
-  display : inline-flex;
+  display: inline-flex;
   width: 100%;
   background-color: var(--c-dark-grey);
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
 header section p {
   background: var(--c-primary-accent);
-  color:var(--c-primary-text);
+  color: var(--c-primary-text);
   /*text-align: center;*/
-  margin-left:1rem;
+  margin-left: 1rem;
   font-size: 2rem;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 header nav ul {
-  display:inline-flex;
+  display: inline-flex;
 }
+
 header nav ul li {
   margin-right: 20px;
-  list-style:none;
-  font-size:.75rem;
+  list-style: none;
+  font-size: .75rem;
 }
+
 /*h1 {
   display: inline;
   justify-items: left;
@@ -90,22 +92,31 @@ h6 {
 section div p {
   display: block;
   text-align: justify;
-  padding-left:50px;
-  padding-right:50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /* Set up card class for our About Me that we are showing */
 .card-about-me {
-  position: relative;
-  border: 3px solid var(--c-primary-accent);
+  /* position: relative;
+  border: 3px solid var(--c-primary-accent);*/
+  display:inline-flex;
 }
 
-.card-about-me h2 {
-  padding: .5rem;
+.card-about-me article p {
+  /*  padding: .5rem;
   position: absolute;
   top: 65%;
   background-color: var(--c-primary-accent);
-  color: var(--c-dark-grey);
+  color: var(--c-dark-grey);*/
+  color: var(--c-primary-accent);
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 /* Set up card class for our first work that we are showing */
@@ -131,7 +142,7 @@ each of our projects that will show up under the Work header.*/
 .card h2 {
   padding: .5rem;
   position: absolute;
-  top:  25%;
+  top: 25%;
   background-color: var(--c-primary-accent);
   color: var(--c-dark-grey);
 }
@@ -144,7 +155,7 @@ each of our projects that will show up under the Work header.*/
 
   background-size: cover;
   background-position: center;
-  display:block;
+  display: block;
 }
 
 .hero-bg h2 {
@@ -160,20 +171,23 @@ each of our projects that will show up under the Work header.*/
 
 /* Set up for footer --------------------------------------------------*/
 footer {
-  display : inline-flex;
+  display: inline-flex;
   width: 100%;
   background-color: var(--c-bg-color-light);
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
+
 section ul {
-  display:inline-flex;
+  display: inline-flex;
 }
+
 section ul li {
-  font-size:.75rem;
-  list-style:none;
+  font-size: .75rem;
+  list-style: none;
   margin-right: 20px;
 }
+
 /* Tablets - header changes color */
 /*@media screen and (max-width: 1200px) {
   p {
@@ -184,36 +198,61 @@ section ul li {
 /* Large smartphones - navbar changes color */
 @media screen and (max-width: 500px) {
   header {
-    flex-wrap:wrap;
-    display : block;
+    flex-wrap: wrap;
+    display: block;
     width: 100%;
     background-color: var(--c-bg-color-light);
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    padding-bottom:20px;
+    padding-bottom: 20px;
   }
+
   header nav ul {
-    display:block;
+    display: block;
   }
+
   header nav ul li {
     background-color: var(--c-dark-grey);
-    list-style:none;
-    font-size:1rem;
-    padding-left:20px;
-    padding-right:20px;
+    list-style: none;
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: left;
     margin-bottom: 5px;
-    }
-    .hero-bg {
-      display:none;
-    }
-    section div p {
-      display: block;
-      text-align: justify;
-      padding-left:0;
-      padding-right:0;
-    }
   }
+
+  .hero-bg {
+    display: none;
+  }
+
+  section div p {
+    display: block;
+    text-align: justify;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .card-about-me {
+    /* position: relative;
+    border: 3px solid var(--c-primary-accent);*/
+    display:block;
+  }
+  
+  /*.card-about-me article p {
+    /*  padding: .5rem;
+    position: absolute;
+    top: 65%;
+    background-color: var(--c-primary-accent);
+    color: var(--c-dark-grey);
+    color: var(--c-primary-accent);
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }*/
+}
 
 
 /* Small smartphones - image placeholders change color */
