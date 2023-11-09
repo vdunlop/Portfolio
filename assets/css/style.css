@@ -20,11 +20,11 @@ body {
 
 /* Styles for the main section. */
 main {
-  display: grid;
+  /*display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 1rem;*/
   /* grid-template-columns: 1fr 1fr;*/
-  /*flex-wrap: wrap;*/
+  display:flex;
 }
 
 /* Set up the images to have some grey-blue tone and to brighten on hover -----------------------*/
@@ -69,10 +69,32 @@ header nav ul li {
   font-size: .75rem;
 }
 
+/* Here is the image that we will be using for the header. */
+.hero-bg {
+  display: flex-inline;
+  Height: 200px;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+.hero-bg h2 {
+  font: italic 1rem Verdana, sans-serif;
+  color: var(--c-dark-grey);
+  background: var(--c-primary-accent);
+  justify-content: right;
+  align-items: end;
+  padding: .5rem;
+  position: absolute;
+  top: 50%;
+}
+
 /* Set up the styling for the About Me section.            --------------------------------------*/
 /* Includes the card .card-about-me to be used in the screen size shifts - see media screen below*/
 
-section div p {
+.card-about-me section div p {
   display: block;
   text-align: justify;
   /*padding-left: 50px;
@@ -150,54 +172,13 @@ section div p {
 /* Set up the card class that we will be using for all of our containers containing ------------*/
 /*each of our projects that will show up under the Work header.*/
 .card {
-  position: relative;
-  border: 3px solid var(--c-primary-accent);
+  display:inline-flex;
+  /*position: relative;
+  border: 3px solid var(--c-primary-accent);justify-content: space-evenly;*/
+  width:100%;
 }
-
-.card h2 {
-  padding: .5rem;
-  position: absolute;
-  top: 25%;
-  background-color: var(--c-primary-accent);
+.card article p {
   color: var(--c-dark-grey);
-}
-
-/* Here is the image that we will be using for the header. */
-.hero-bg {
-  display: flex-inline;
-  Height: 200px;
-  width: 100%;
-
-  background-size: cover;
-  background-position: center;
-  display: block;
-}
-
-.hero-bg h2 {
-  font: italic 1rem Verdana, sans-serif;
-  color: var(--c-dark-grey);
-  background: var(--c-primary-accent);
-  justify-content: right;
-  align-items: end;
-  padding: .5rem;
-  position: absolute;
-  top: 50%;
-}
-
-/* Set up card class for our footer that we are showing */
-.card-footer {
-  /* position: relative;
-  border: 3px solid var(--c-primary-accent);*/
-  display: inline-flex;
-}
-
-.card-footer article p {
-  /*  padding: .5rem;
-  position: absolute;
-  top: 65%;
-  background-color: var(--c-primary-accent);
-  color: var(--c-dark-grey);*/
-  color: var(--c-primary-accent);
   display: block;
   font-size: 1.5em;
   margin-block-start: 0.83em;
@@ -205,13 +186,78 @@ section div p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+  width: 100%;
+  text-align: right;
+}
+.card article {
+  width: 25%;
+  text-align: justify;
+}
+/*.card h2 {
+  padding: .5rem;
+  position: absolute;
+  top: 25%;
+  background-color: var(--c-primary-accent);
+  color: var(--c-dark-grey);
+}*/
+.card div {
+  width: 75%;
+  padding: 5% 5% 5% 5%;
+}
+.card div section img{
+  width: 300px;
+  height: 150px;
+/*  border: 3px solid var(--c-primary-accent);*/
+  object-fit: cover;
+  margin-top:.5rem;
+  margin-bottom:/5rem;
 }
 
-card-footer nav ul {
+.card div section {
+  flex:1 1;
+
+}
+
+
+/* Set up card class for our footer that we are showing -----------------------------------------*/
+.card-footer {
+  /* position: relative;
+  border: 3px solid var(--c-primary-accent);*/
+  display: inline-flex;
+  width:100%;
+  justify-content: space-between;
+}
+.card-footer article {
+  width:25%;
+  text-align:justify;
+}
+.card-footer article p {
+  /*  padding: .5rem;
+  position: absolute;
+  top: 65%;
+  background-color: var(--c-primary-accent);
+  color: var(--c-dark-grey);*/
+  color: var(--c-dark-grey);
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  width: 100%;
+  text-align:right;
+}
+.card-footer nav {
+  display: block:
+  width:75%;
+}
+
+.card-footer nav ul {
   display: inline-flex;
 }
 
-card-footer nav ul li {
+.card-footer nav ul li {
   margin-right: 20px;
   list-style: none;
   font-size: .75rem;
@@ -225,7 +271,7 @@ footer {
   width: 100%;
   background-color: var(--c-bg-color-light);
   justify-content: space-between;
-  align-items: center;
+  align-items: justify;
 }
 
 section ul {
@@ -235,7 +281,7 @@ section ul {
 section ul li {
   font-size: .75rem;
   list-style: none;
-  margin-right: 20px;
+
 }*/
 
 /* Tablets - header changes color */
@@ -245,7 +291,7 @@ section ul li {
   }
 */
 
-/* Large smartphones - navbar changes color */
+/* Large smartphones - navbar changes color ------------------------------------------------------*/
 @media screen and (max-width: 600px) {
   header {
     flex-wrap: wrap;
