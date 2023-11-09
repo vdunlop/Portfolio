@@ -18,19 +18,21 @@ body {
   background-color: var(--c-bg-color-light);
 }
 
+/* Styles for the main section. */
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   /* grid-template-columns: 1fr 1fr;*/
+  /*flex-wrap: wrap;*/
 }
 
-/* Set up the images to have some grey-blue tone and to brighten on hover*/
+/* Set up the images to have some grey-blue tone and to brighten on hover -----------------------*/
 img {
   /*filter: grayscale(90%) blur(.1rem);*/
   filter: sepia(50%) saturate(150%) brightness(50%) hue-rotate(180deg);
-  Height: 100px;
-  width: 50px;
+ /* Height: 100px;
+  width: 50px;*/
 }
 
 img:hover {
@@ -38,8 +40,8 @@ img:hover {
   cursor: pointer;
 }
 
-/* Style the main header and h1. ----------------------------------*/
-
+/* Style header element and its children: section p; nav ul; nav ul li --------------------------*/
+/* These will be changed during a screen size shift - see media screen below */
 header {
   display: inline-flex;
   width: 100%;
@@ -67,49 +69,31 @@ header nav ul li {
   font-size: .75rem;
 }
 
-/*h1 {
-  display: inline;
-  justify-items: left;
-  font-size: 2em;
-  background-color: var(--c-bg-color-light)*/
-/*block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-}*/
+/* Set up the styling for the About Me section.            --------------------------------------*/
+/* Includes the card .card-about-me to be used in the screen size shifts - see media screen below*/
 
-/* Set the common styling for h1 through h6 */
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--c-primary-accent);
-}
-
-/* About Me verbiage style --------------------------------------*/
 section div p {
   display: block;
   text-align: justify;
-  padding-left: 50px;
-  padding-right: 50px;
+  /*padding-left: 50px;
+  padding-right: 50px;*/
 }
 
 /* Set up card class for our About Me that we are showing */
 .card-about-me {
   /* position: relative;
   border: 3px solid var(--c-primary-accent);*/
-  display:inline-flex;
+  display: inline-flex;
 }
 
+/* heading About Me */
 .card-about-me article p {
   /*  padding: .5rem;
   position: absolute;
   top: 65%;
   background-color: var(--c-primary-accent);
   color: var(--c-dark-grey);*/
-  color: var(--c-primary-accent);
+  color: var(--c-dark-grey);
   display: block;
   font-size: 1.5em;
   margin-block-start: 0.83em;
@@ -117,44 +101,54 @@ section div p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+  width: 100%;
+  text-align: right;
 }
+
+.card-about-me article {
+  width: 25%;
+  text-align: justify;
+}
+
+/* Paragraph for About Me */
+.card-about-me div {
+  width: 75%;
+  padding: 5% 5% 5% 5%;
+ }
+
+/* Set up the styling for the Work section.            --------------------------------------*/
+/* Includes the card .card-work to be used in the screen size shifts - see media screen below*/
 
 /* Set up card class for our first work that we are showing */
-/*.card-work {
-  position: relative;
-  border: 3px solid var(--c-primary-accent);
-}
-
-.card-work h2 {
-  position: absolute;
-  top: 65%;
-  background-color: var(--c-primary-accent);
-  color: var(--c-dark-grey);
-}*/
 .card-work {
-  /*position: relative;
-  border: 3px solid var(--c-primary-accent);*/
-  display:inline-flex;
+  display: inline-flex;
 }
-
+/* heading Work */
 .card-work article p {
-  color: var(--c-primary-accent);
+  color: var(--c-dark-grey);
   display: block;
   font-size: 1.5em;
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-weight: bold; 
-  /* 
-  position: absolute;
-  top: 65%;
-  background-color: var(--c-primary-accent);
-  color: var(--c-dark-grey);*/
+  font-weight: bold;
+  width: 100%;
+  text-align: right;
+}
+.card-work article {
+  width: 25%;
+  text-align: justify;
 }
 
-/* Set up the card class that we will be using for all of our containers containing
-each of our projects that will show up under the Work header.*/
+/* Work image */
+.card-work div {
+  width: 75%;
+  padding: 5% 5% 5% 5%;
+}
+
+/* Set up the card class that we will be using for all of our containers containing ------------*/
+/*each of our projects that will show up under the Work header.*/
 .card {
   position: relative;
   border: 3px solid var(--c-primary-accent);
@@ -190,7 +184,42 @@ each of our projects that will show up under the Work header.*/
   top: 50%;
 }
 
-/* Set up for footer --------------------------------------------------*/
+/* Set up card class for our footer that we are showing */
+.card-footer {
+  /* position: relative;
+  border: 3px solid var(--c-primary-accent);*/
+  display: inline-flex;
+}
+
+.card-footer article p {
+  /*  padding: .5rem;
+  position: absolute;
+  top: 65%;
+  background-color: var(--c-primary-accent);
+  color: var(--c-dark-grey);*/
+  color: var(--c-primary-accent);
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+card-footer nav ul {
+  display: inline-flex;
+}
+
+card-footer nav ul li {
+  margin-right: 20px;
+  list-style: none;
+  font-size: .75rem;
+}
+
+
+
+/* Set up for footer --------------------------------------------------
 footer {
   display: inline-flex;
   width: 100%;
@@ -207,7 +236,7 @@ section ul li {
   font-size: .75rem;
   list-style: none;
   margin-right: 20px;
-}
+}*/
 
 /* Tablets - header changes color */
 /*@media screen and (max-width: 1200px) {
@@ -217,7 +246,7 @@ section ul li {
 */
 
 /* Large smartphones - navbar changes color */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   header {
     flex-wrap: wrap;
     display: block;
@@ -252,14 +281,15 @@ section ul li {
     padding-left: 0;
     padding-right: 0;
   }
+
   .card-about-me {
     /* position: relative;
     border: 3px solid var(--c-primary-accent);*/
-    display:block;
+    display: block;
   }
-  
+
   /*.card-about-me article p {
-    /*  padding: .5rem;
+    padding: .5rem;
     position: absolute;
     top: 65%;
     background-color: var(--c-primary-accent);
@@ -276,9 +306,9 @@ section ul li {
   .card-work {
     /*position: relative;
     border: 3px solid var(--c-primary-accent);*/
-    display:block;
+    display: block;
   }
-  
+
   /*.card-work article p {
     color: var(--c-primary-accent);
     display: block;
@@ -291,18 +321,16 @@ section ul li {
     position: absolute;
     top: 65%;
     background-color: var(--c-primary-accent);
-    color: var(--c-dark-grey);*/
-  }
-  
-}
+    color: var(--c-dark-grey);
+}*/
 
+}
 
 /* Small smartphones - image placeholders change color */
 /*@media screen and (max-width: 576px) {
   p {
     background: #8ac4ff;
   }*/
-*/
 
 /* Utilities */
 .text-center {
