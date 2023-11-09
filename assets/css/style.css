@@ -24,14 +24,14 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;*/
   /* grid-template-columns: 1fr 1fr;*/
-  display:flex;
+  display: flex;
 }
 
 /* Set up the images to have some grey-blue tone and to brighten on hover -----------------------*/
 img {
   /*filter: grayscale(90%) blur(.1rem);*/
   filter: sepia(50%) saturate(150%) brightness(50%) hue-rotate(180deg);
- /* Height: 100px;
+  /* Height: 100px;
   width: 50px;*/
 }
 
@@ -91,30 +91,21 @@ header nav ul li {
   top: 50%;
 }
 
-/* Set up the styling for the About Me section.            --------------------------------------*/
+/* Set up the styling for the About Me section.            -------------------------------*/
 /* Includes the card .card-about-me to be used in the screen size shifts - see media screen below*/
 
 .card-about-me section div p {
   display: block;
   text-align: justify;
-  /*padding-left: 50px;
-  padding-right: 50px;*/
 }
 
 /* Set up card class for our About Me that we are showing */
 .card-about-me {
-  /* position: relative;
-  border: 3px solid var(--c-primary-accent);*/
   display: inline-flex;
 }
 
 /* heading About Me */
 .card-about-me article p {
-  /*  padding: .5rem;
-  position: absolute;
-  top: 65%;
-  background-color: var(--c-primary-accent);
-  color: var(--c-dark-grey);*/
   color: var(--c-dark-grey);
   display: block;
   font-size: 1.5em;
@@ -127,24 +118,35 @@ header nav ul li {
   text-align: right;
 }
 
+.card-about-me div p {
+  display: block;
+  text-align: justify;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .card-about-me article {
   width: 25%;
   text-align: justify;
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: var(--c-dark-grey);
+  padding-right: 10px;
 }
 
 /* Paragraph for About Me */
 .card-about-me div {
   width: 75%;
   padding: 5% 5% 5% 5%;
- }
+}
 
 /* Set up the styling for the Work section.            --------------------------------------*/
 /* Includes the card .card-work to be used in the screen size shifts - see media screen below*/
-
 /* Set up card class for our first work that we are showing */
 .card-work {
   display: inline-flex;
 }
+
 /* heading Work */
 .card-work article p {
   color: var(--c-dark-grey);
@@ -158,9 +160,14 @@ header nav ul li {
   width: 100%;
   text-align: right;
 }
+
 .card-work article {
   width: 25%;
   text-align: justify;
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: var(--c-dark-grey);
+  padding-right: 10px;
 }
 
 /* Work image */
@@ -172,11 +179,12 @@ header nav ul li {
 /* Set up the card class that we will be using for all of our containers containing ------------*/
 /*each of our projects that will show up under the Work header.*/
 .card {
-  display:inline-flex;
+  display: inline-flex;
   /*position: relative;
   border: 3px solid var(--c-primary-accent);justify-content: space-evenly;*/
-  width:100%;
+  width: 100%;
 }
+
 .card article p {
   color: var(--c-dark-grey);
   display: block;
@@ -189,10 +197,16 @@ header nav ul li {
   width: 100%;
   text-align: right;
 }
+
 .card article {
   width: 25%;
   text-align: justify;
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: var(--c-dark-grey);
+  padding-right: 10px;
 }
+
 /*.card h2 {
   padding: .5rem;
   position: absolute;
@@ -204,18 +218,18 @@ header nav ul li {
   width: 75%;
   padding: 5% 5% 5% 5%;
 }
-.card div section img{
+
+.card div section img {
   width: 300px;
   height: 150px;
-/*  border: 3px solid var(--c-primary-accent);*/
+  /*  border: 3px solid var(--c-primary-accent);*/
   object-fit: cover;
-  margin-top:.5rem;
-  margin-bottom:/5rem;
+  margin-top: .2rem;
+  margin-bottom: 2rem;
 }
 
 .card div section {
-  flex:1 1;
-
+  flex: 1 1;
 }
 
 
@@ -224,13 +238,19 @@ header nav ul li {
   /* position: relative;
   border: 3px solid var(--c-primary-accent);*/
   display: inline-flex;
-  width:100%;
+  width: 100%;
   justify-content: space-between;
 }
+
 .card-footer article {
-  width:25%;
-  text-align:justify;
+  width: 25%;
+  text-align: justify;
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: var(--c-dark-grey);
+  padding-right: 10px;
 }
+
 .card-footer article p {
   /*  padding: .5rem;
   position: absolute;
@@ -246,11 +266,12 @@ header nav ul li {
   margin-inline-end: 0px;
   font-weight: bold;
   width: 100%;
-  text-align:right;
+  text-align: right;
 }
+
 .card-footer nav {
-  display: block:
-  width:75%;
+  display: block;
+  width: 75%;
 }
 
 .card-footer nav ul {
@@ -263,44 +284,31 @@ header nav ul li {
   font-size: .75rem;
 }
 
-
-
-/* Set up for footer --------------------------------------------------
-footer {
-  display: inline-flex;
-  width: 100%;
-  background-color: var(--c-bg-color-light);
-  justify-content: space-between;
-  align-items: justify;
-}
-
-section ul {
-  display: inline-flex;
-}
-
-section ul li {
-  font-size: .75rem;
-  list-style: none;
-
-}*/
-
-/* Tablets - header changes color */
-/*@media screen and (max-width: 1200px) {
-  p {
-    background: #772014;
-  }
-*/
-
-/* Large smartphones - navbar changes color ------------------------------------------------------*/
+/* Large smartphones - navbar changes color -------------------------------------------*/
 @media screen and (max-width: 600px) {
+
+  /* breakpoint for header */
   header {
     flex-wrap: wrap;
     display: block;
     width: 100%;
     background-color: var(--c-bg-color-light);
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     padding-bottom: 20px;
+  }
+
+  header section p {
+    background: var(--c-primary-accent);
+    color: var(--c-primary-text);
+    /*text-align: center;*/
+    margin-left: 0rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  header nav {
+    padding-inline-start: 0px;
   }
 
   header nav ul {
@@ -311,8 +319,8 @@ section ul li {
     background-color: var(--c-dark-grey);
     list-style: none;
     font-size: 1rem;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
     text-align: left;
     margin-bottom: 5px;
   }
@@ -321,54 +329,111 @@ section ul li {
     display: none;
   }
 
-  section div p {
-    display: block;
-    text-align: justify;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
+  /* breakpoint for About Me */
   .card-about-me {
-    /* position: relative;
-    border: 3px solid var(--c-primary-accent);*/
     display: block;
   }
 
-  /*.card-about-me article p {
-    padding: .5rem;
-    position: absolute;
-    top: 65%;
-    background-color: var(--c-primary-accent);
-    color: var(--c-dark-grey);
+  .card-about-me article {
+    width: 100%;
+    text-align: justify;
+    border-right-width: 0px;
+    border-right-style: none;
+    border-right-color: none;
+    padding-right: 0px;
+  }
+
+  .card-about-me article p {
     color: var(--c-primary-accent);
     display: block;
     font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
+    margin-block-start: 0em;
+    margin-block-end: 0.0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-  }*/
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-about-me div {
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+
+  /* breakpoint for Work */
   .card-work {
     /*position: relative;
     border: 3px solid var(--c-primary-accent);*/
     display: block;
   }
 
-  /*.card-work article p {
+  .card-work article {
+    width: 100%;
+    text-align: justify;
+    border-right-width: 0px;
+    border-right-style: none;
+    border-right-color: none;
+    padding-right: 0px;
+  }
+
+  .card-work article p {
     color: var(--c-primary-accent);
     display: block;
     font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
+    margin-block-start: 0em;
+    margin-block-end: 0.0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-weight: bold; 
-    position: absolute;
-    top: 65%;
-    background-color: var(--c-primary-accent);
-    color: var(--c-dark-grey);
-}*/
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Work image */
+  .card-work div {
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+
+  /* breakpoint for list of images */
+
+  /* breakpoint for Footer */
+  .card-footer {
+    display: block;
+  }
+
+  .card-footer article {
+    width: 100%;
+    text-align: justify;
+    border-right-width: 0px;
+    border-right-style: none;
+    border-right-color: none;
+    padding-right: 0px;
+  }
+
+  .card-footer article p {
+    color: var(--c-primary-accent);
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0em;
+    margin-block-end: 0.0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+  .card-footer nav ul {
+    display: block;
+  }
+  
+  .card-footer nav ul li {
+    margin-right: 0px;
+    list-style: none;
+    font-size: .75rem;
+  }
+  
 
 }
 
