@@ -184,7 +184,14 @@ header nav ul li {
   border: 3px solid var(--c-primary-accent);justify-content: space-evenly;*/
   width: 100%;
 }
-
+.card article {
+  width: 25%;
+  text-align: justify;
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: var(--c-dark-grey);
+  padding-right: 10px;
+}
 .card article p {
   color: var(--c-dark-grey);
   display: block;
@@ -198,27 +205,19 @@ header nav ul li {
   text-align: right;
 }
 
-.card article {
-  width: 25%;
-  text-align: justify;
-  border-right-width: 3px;
-  border-right-style: solid;
-  border-right-color: var(--c-dark-grey);
-  padding-right: 10px;
-}
 
-/*.card h2 {
-  padding: .5rem;
-  position: absolute;
-  top: 25%;
-  background-color: var(--c-primary-accent);
-  color: var(--c-dark-grey);
-}*/
+
 .card div {
   width: 75%;
-  padding: 5% 5% 5% 5%;
+  padding-left:5%;
+ }
+.card-item {
+  display:inline-flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
-
 .card div section img {
   width: 300px;
   height: 150px;
