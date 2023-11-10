@@ -217,6 +217,8 @@ header nav ul li {
   flex-direction:row;
   align-items: flex-start;
   justify-content: space-evenly;
+  flex: 1 1;
+
 }
 .card div section img {
   width: 300px;
@@ -225,10 +227,6 @@ header nav ul li {
   object-fit: cover;
   margin-top: .2rem;
   margin-bottom: 2rem;
-}
-
-.card div section {
-  flex: 1 1;
 }
 
 
@@ -396,6 +394,47 @@ header nav ul li {
   }
 
   /* breakpoint for list of images */
+  .card {
+    display: block;
+    /*position: relative;
+    border: 3px solid var(--c-primary-accent);justify-content: space-evenly;*/
+    width: 100%;
+  }
+  .card article {
+    width: 25%;
+    text-align: justify;
+    border-right-width: 0px;
+    border-right-style: none;
+    border-right-color: none;
+    padding-right: 0px;
+  }
+  .card article p {
+    color: var(--c-dark-grey);
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.0em;
+    margin-block-end: 0.0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+.card div section img{
+  display:block;
+  width:100%;
+  align-items: :center;
+}
+  /*.card-item {
+    /*display:inline-flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;*/
+    display:block;
+    align-items:center;
+    width:100%;
+  }*/
 
   /* breakpoint for Footer */
   .card-footer {
@@ -431,6 +470,8 @@ header nav ul li {
     margin-right: 0px;
     list-style: none;
     font-size: .75rem;
+    width: 100%;
+    text-align: left;
   }
   
 
