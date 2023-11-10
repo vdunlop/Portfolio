@@ -205,8 +205,6 @@ header nav ul li {
   text-align: right;
 }
 
-
-
 .card div {
   width: 75%;
   padding-left:5%;
@@ -218,7 +216,6 @@ header nav ul li {
   align-items: flex-start;
   justify-content: space-evenly;
   flex: 1 1;
-
 }
 .card div section img {
   width: 300px;
@@ -430,7 +427,7 @@ header nav ul li {
     flex-wrap:wrap;
     flex-direction:column;
     align-items: center;
-    justify-content: space-evenly;*/
+    justify-content: space-evenly;
     display:block;
     align-items:center;
     width:100%;
